@@ -1,0 +1,218 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+
+}
+
+
+.mySwiper{
+  height: 70vh;
+  padding: 10px;
+  margin: 20px;
+
+}
+
+
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+  margin:  0 auto ;
+  max-width: 1300px;
+}
+
+img{
+  width:400px;
+}
+
+.menu{
+  background-color: #000;
+  width: 100%;
+}
+
+nav{
+  display: flex;
+ 
+  justify-content: space-between;
+  text-align: center;
+  .logo{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+}
+
+nav ul{
+  display: flex;
+  padding: 30px;
+  gap: 20px;
+  justify-content: end;
+}
+
+nav ul a{
+  color: #fff;
+}
+
+
+.headerContent{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  padding-bottom: 60px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+.btns1{
+  display: flex;
+  gap: 20px;
+}
+
+
+.btn2{
+  cursor: pointer;
+  padding: 5px 70px ;
+  border: #000 2px solid;
+  border-radius: 30px;
+  background-color: transparent;
+  width: 200px;
+  text-align: center;
+}
+
+
+.btn1{
+  cursor: pointer;
+  padding: 5px 70px ;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  width: 200px;
+}
+
+
+.header-txt{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 700px;
+  padding: 100px;
+  
+}
+/*VENTAS:*/
+
+.seccion1{
+  background-color: #f9f9f9;
+  height: 45vh;
+}
+
+.hunu{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.containerVenta{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.venta1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 150px;
+  box-shadow: 1px 1px 5px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.imgventa{
+  width: 100px;
+}
+
+.vernta-txt h1{
+  font-size: 22px;
+}
+
+.vernta-txt p{
+  font-size: 14px;
+}
+
+/*Tienda*/
+
+
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.imgCard{
+  width: 100px;
+}
+.containerImgProd:hover{
+  width: 120px;
+  transition: .5s;
+  transform: translateY(-20%);
+  cursor: pointer;
+}
+
+
+.containerProd{
+  max-width: 300px;
+  border: 2px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contentCart{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+}
+
+.btn3{
+  cursor: pointer;
+  padding: 15px 30px ;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+}
+
+span{
+  color: #34d000;
+}
+
+
+.containerFilters{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
