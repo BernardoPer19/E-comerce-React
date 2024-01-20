@@ -44,10 +44,10 @@ const Header = () => {
         }}
         mousewheel={true}
         keyboard={true}
-        loop={true}
+        // loop={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          // delay: 2500,
+          // disableOnInteraction: false,
         }}
         modules={[Navigation, Pagination, Mousewheel, Keyboard,Autoplay]}
         className="mySwiper container "

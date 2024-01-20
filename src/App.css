@@ -112,7 +112,7 @@ nav ul a{
 
 .seccion1{
   background-color: #f9f9f9;
-  height: 45vh;
+  min-height: 85vh;
 }
 
 .hunu{
@@ -216,3 +216,141 @@ span{
   justify-content: center;
   gap: 100px;
 }
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+
+
+  nav ul{
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .headerContent {
+    flex-direction: row; /* Adjust for larger screens */
+  }
+
+  .btns1 {
+    flex-direction: column; /* Adjust for larger screens */
+  }
+
+  .header-txt {
+    padding: 50px; /* Adjust padding for larger screens */
+  }
+
+  .containerVenta,
+  .cardContainer {
+    justify-content: space-around;
+  }
+  .tienda{
+    min-height: 100vh;
+  }
+
+  .seccion1{
+    min-height: 65vh;
+  }
+  .btn3{
+    height: 50px;
+    margin-top: 40px;
+  }
+
+  .containerImg img{
+    width:200px;
+  }
+  body
+  {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1024px) {
+
+  body
+  {
+    width: auto;
+  }
+  nav ul{
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .headerContent {
+    flex-direction: row; /* Adjust for larger screens */
+  }
+
+  .btns1 {
+    flex-direction: column; /* Adjust for larger screens */
+  }
+
+  .header-txt {
+    padding: 50px; /* Adjust padding for larger screens */
+  }
+
+  .containerVenta,
+  .cardContainer {
+    justify-content: space-around;
+  }
+
+  .btn3{
+    height: 50px;
+    margin-top: 40px;
+  }
+
+  .containerImg img{
+    width:200px;
+  }
+  
+}
+
+
+@media screen and (min-width: 769px) {
+  nav ul {
+    flex-direction: row; /* Revert to row layout for larger screens */
+    justify-content: flex-end;
+  }
+
+  .headerContent {
+    flex-direction: row;
+  }
+
+  .btns1 {
+    flex-direction: row;
+  }
+
+  .header-txt {
+    padding: 50px;
+  }
+
+  .containerVenta,
+  .cardContainer {
+    justify-content: space-around;
+  }
+
+  .tienda {
+    min-height: auto; /* Revert min-height for larger screens */
+  }
+
+  .seccion1 {
+    min-height: auto; /* Revert min-height for larger screens */
+  }
+
+  .btn3 {
+    height: auto; /* Revert height for larger screens */
+    margin-top: 0; /* Revert margin-top for larger screens */
+  }
+
+  .containerImg img {
+    width: auto; /* Revert image width for larger screens */
+  }
+
+  body {
+    width: 100%;
+  }
+}
+

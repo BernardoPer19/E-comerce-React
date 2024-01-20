@@ -4,41 +4,52 @@ import ContextFilter from "../context/ContextFilter";
 import FilterButtons from "./FilterButtons";
 
 const Producto = () => {
-  const { data } = useFetch();
-
+  const { data, loading, error } = useFetch();
   const { filterproduct } = useContext(ContextFilter);
 
+  if (loading) {
+    return <p>Loading...</p>; // Add a loading indicator
+  }
+
+  if (error) {
+    return <p>Error fetching data.</p>; // Handle errors
+  }
+
   const filtrado = data.filter((item) => {
-    return(
+    return (
       (item.category === filterproduct.category ||
-      filterproduct.category === "all") && item.price>=filterproduct.minPrice
-    )
+        filterproduct.category === "all") &&
+      item.price >= filterproduct.minPrice
+    );
   });
 
-  console.log(filtrado);
-
   return (
-    <>
+    <div className="tienda">
       <h1 className="hunu">Productos</h1>
 
-      <FilterButtons></FilterButtons>
+      <FilterButtons />
+
       <div className="cardContainer container">
-        {filtrado.map((producto) => (
-          <div key={producto.id} className="containerProd">
-            <h4>{producto.title}</h4>
-            <div className="containerImgProd">
-              <img src={producto.image} alt="" className="imgCard" />
+        {filtrado.length > 0 ? (
+          filtrado.map((producto) => (
+            <div key={producto.id} className="containerProd">
+              <h4>{producto.title}</h4>
+              <div className="containerImgProd">
+                <img src={producto.image} alt="" className="imgCard" />
+              </div>
+              <div className="contentCart">
+                <p>
+                  Precio: <span> {producto.price}</span>$
+                </p>
+                <button className="btn3">Add to Cart</button>
+              </div>
             </div>
-            <div className="contentCart">
-              <p>
-                Precio: <span> {producto.price}</span>$
-              </p>
-              <button className="btn3">Add to Cart</button>
-            </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
